@@ -1,0 +1,65 @@
+
+    .popup img{
+        width: 100px;
+        margin-top: 0px;
+        border-radius: 50%;
+
+
+    }
+    .popup
+    {
+        width:400px;
+        height:400px;
+        background:white;
+        border-radius: 6px;
+        position: fixed;
+        top:0%;
+        left:50%;
+        text-align: center;
+        padding: 30px;
+        visibility: hidden;
+        animation-name: toastTrans;
+        animation-duration: 2s;
+
+    }
+    .open-popup
+    {
+        visibility: visible;
+        top: 50%;
+        z-index:5;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    .popup h2{
+        font-size: 40px;
+        font-weight: bold;
+        margin: 30px 10px;
+    }
+    .popup p,.popup h2{
+        color:#552ca4;
+
+    }
+    .popup button
+    {
+        width:100%;
+        margin-top: 30px;
+        padding:10px ;
+        cursor:pointer;
+        background-color: rgb(17, 216, 17);
+        color:#fff;
+        border:0;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 5px;
+
+    }
+    @keyframes toastTrans{
+        0% {
+            top : 0%
+        }
+        50%{
+            top:25%
+        }
+        100%{
+            top:50%
+        }
+    }

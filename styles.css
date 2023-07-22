@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+header {
+    
+    padding: 40px;
+    background-color: rgb(17, 124, 143);
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+    text-transform:uppercase;
+}
+
+.main {
+    background-image: url('gyms.jpg');
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+h2 {
+    padding: 20px;
+}
+
+section:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+section {
+    min-height: 100vh;
+}
+
+
+iframe {
+    height: 75vh;
+}
+
+section h5 {
+    margin: 40px;
+}
+
+footer {
+    background-color: #333;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+.aboutUs{
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutUs .title{
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+.aboutUs .subinfo{
+    font-size: medium;
+    margin: 0 10px;
+    margin-top: 4px;
+}
+.aboutUs img{
+    border: 5px solid black;
+    box-shadow: #333;
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+.aboutUs .subinfo .timetable{
+    list-style: none;
+    margin: 0px 0px;
+    padding: 0px;
+    margin-left: 30px;
+}
+.table {
+    width: 100%;
+    border: 1px solid #EEEEEE;
+  }
+  
+  .table-header {
+    display: flex;
+    width: 100%;
+    background: #000;
+    padding: 18px 0;
+  }
+  
+  .table-row {
+    display: flex;
+    width: 100%;
+    padding: 18px 0;
+  }
+  .table-row:nth-of-type(odd) {
+    background: #EEEEEE;
+  }
+  
+  .table-data, .header__item {
+    flex: 1 1 20%;
+    text-align: center;
+  }
+  
+  .header__item {
+    text-transform: uppercase;
+  }
+  
+  .filter__link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .filter__link::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .filter__link.desc::after {
+    content: "(desc)";
+  }
+  .filter__link.asc::after {
+    content: "(asc)";
+  }

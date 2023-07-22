@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+</head>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<script language="javascript">
+    function validate() {
+        var myForm = document.form1;
+    }
+
+    function isCharKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if ((charCode < 97 || charCode > 123) && (charCode < 65 || charCode > 91))
+            return false;
+        else
+            return true;
+    }
+    //-->
+
+
+    function isNumKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode < 48 || charCode > 57)
+            return false;
+        else
+            return true;
+    }
+
+</script>
+<style>
+    * {
+        box-sizing: border-box;
+        background-color: rgb('#ffffff')
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    form {
+
+        background-attachment: fixed;
+        position: relative;
+        background-color: transparent;
+        padding: 30px;
+        max-width: 600px;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
+    }
+
+    body {
+        /* background: #8B008B; */
+        font-family: 'Titillium Web', sans-serif;
+        background-image: url('gyms3.jpg');
+        background-size: cover;
+    }
+
+    h1 {
+        
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .5;
+        z-index: 1;
+        background-size: cover;
+    }
+
+    img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+    }
+
+    .content {
+        position: relative;
+        z-index: 3;
+    }
+    .content .title{
+        font-size: large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-align: center;
+        background: #ffffff;
+    }
+    .content .subinfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content .subinfo .group{
+        margin-top: 20px ;
+        width: 100%;    
+        color: #ffffff;
+    }
+    .content .subinfo .group .labelfields{
+        padding-right: 50px;
+    }
+    .content .subinfo .group .textFields{
+        display: inline;
+        color: #ffffff;
+    }
+</style>
+
+<body>
+    <form action=manager.php method=post>
+        <div class="background">
+        </div>
+        <div class='content'>
+            <div class="title">
+                Register
+            </div>
+            <div class="subinfo">
+                <div class="group">
+                    <div class="labelfields">
+                        Full Name:
+                    </div>
+                    <div class="textFields">
+                        <input type=name name=name placeholder=First_name onkeypress='return isCharKey(event)' required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Enter your Email: *
+                    </div>
+                    <div class="textFields">
+                        <input type=Email name=Email required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Enter your Age :
+                    </div>
+                    <div class="textFields">
+                        <input type=text name=age placeholder=age... onkeypress='return isNumKey(event)' required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Gender *
+                    </div>
+                    <div class="textFields">
+                        Male <input type=radio name=gender value=Male id=male required> Female<input type=radio
+                            name=gender value=Female id=female required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Enter your Mobile no.: *
+                    </div>
+                    <div class="textFields">
+                        <input type=tel name=mobileno placeholder=Enter.mobile onkeypress='return isNumKey(event)'
+                            required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Start Date: *
+                    </div>
+                    <div class="textFields">
+                        <input type=date name=date id=start_date required>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Address :
+                    </div>
+                    <div class="textFields">
+                        <textarea name=address id=address cols=60 rows=4 placeholder=Enter your address..></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                Payment
+
+            </div>
+            <div class="subinfo">
+                <div class="group">
+                    <div class="labelfields">
+                        Subscription :
+                    </div>
+                    <div class="textFields">
+                        <input type=radio name=subscription value=1month>1month</input>
+                        <br>
+                        <input type=radio name=subscription value=6month>6month</input>
+                        <br>
+                        <input type=radio name=subscription value=1year>1year</input>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="labelfields">
+                        Payment type :
+                    </div>
+                    <div class="textFields">
+                        <input type=radio name=payment value=offline required>offline</input>
+                        <br>
+                        <input type=radio name=payment value=online required>online</input>
+                        <br>
+                    </div>
+                </div>
+                <div>
+                    <img src=code.jpg width=350>
+                    <input type=submit value=Register>
+                </div>
+                
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
